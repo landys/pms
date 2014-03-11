@@ -1,0 +1,502 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\PMS.rc2""  // 非 Microsoft Visual C++ 编辑资源\r\n"
+    "#include ""afxres.rc""         // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\PMS.ico"
+IDR_PMSTYPE             ICON                    "res\\PMSDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "退出(&X)",                    ID_APP_EXIT
+    END
+    POPUP "视图(&V)"
+    BEGIN
+        MENUITEM "状态栏(&S)",                  ID_VIEW_STATUS_BAR
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "帮助主题(&H)",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "关于 PMS(&A)...",             ID_APP_ABOUT
+    END
+END
+
+IDR_PRINT MENU 
+BEGIN
+    POPUP "操作"
+    BEGIN
+        MENUITEM "打印...",                     ID_PRINT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT
+    VK_F1,          ID_HELP,                VIRTKEY 
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "关于 PMS"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "PMS Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_LEFTVIEW DIALOGEX 0, 0, 127, 283
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "添加病人",IDC_ADD,31,132,62,18
+    PUSHBUTTON      "修改病人信息",IDC_Modify,31,89,62,18
+    PUSHBUTTON      "删除病人",IDC_Delete,31,111,62,18
+    PUSHBUTTON      "查看心电图",IDC_SEE_CG,31,44,62,18
+    EDITTEXT        IDC_PATIENTID,61,22,43,17,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "病人编号",IDC_STATIC,23,26,33,8
+    GROUPBOX        "病人信息操作",IDC_STATIC,10,10,107,146
+    GROUPBOX        "系统定时记录设置",IDC_STATIC,9,166,109,112
+    LTEXT           "随时接收信号间隔",IDC_STATIC,29,183,65,8
+    LTEXT           "定时记录数据间隔",IDC_STATIC,28,215,65,8
+    PUSHBUTTON      "确定",IDC_YES,23,249,35,15
+    EDITTEXT        IDC_TXT_INTERVAL,30,195,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_TXT_REC_INTERVAL,29,229,34,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "取消",IDC_CANCEL,64,249,35,15
+    LTEXT           "ms",IDC_STATIC,77,196,9,8
+    LTEXT           "信号间隔",IDC_STATIC,67,231,33,8
+    PUSHBUTTON      "查看患者日志",IDC_SEE_LOG,31,66,62,18
+END
+
+IDD_DLG_PATIENT DIALOGEX 0, 0, 238, 264
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "添加病人"
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,55,237,50,15
+    PUSHBUTTON      "取消",IDCANCEL,112,237,50,15
+    LTEXT           "编号",IDC_STATIC,26,24,17,9
+    LTEXT           "姓名",IDC_STATIC,128,24,17,9
+    LTEXT           "年龄",IDC_STATIC,27,47,17,9
+    LTEXT           "性别",IDC_STATIC,124,48,17,9
+    EDITTEXT        IDC_PATIENTID,62,21,40,15,ES_AUTOHSCROLL | ES_NUMBER,0,
+                    HIDC_PATIENTID
+    EDITTEXT        IDC_NAME,160,20,40,15,ES_AUTOHSCROLL,0,HIDC_NAME
+    CONTROL         "男",IDC_MALE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,154,
+                    47,24,11,0,HIDC_MALE
+    CONTROL         "女",IDC_FEMALE,"Button",BS_AUTORADIOBUTTON,183,47,24,11
+    EDITTEXT        IDC_AGE,62,45,40,15,ES_AUTOHSCROLL | ES_NUMBER,0,
+                    HIDC_AGE
+    GROUPBOX        "病人资料",IDC_STATIC,13,7,210,91
+    LTEXT           "病情",IDC_STATIC,26,124,17,9
+    LTEXT           "心电安全值",IDC_STATIC,23,142,41,9
+    LTEXT           "体温安全值",IDC_STATIC,23,161,41,9
+    LTEXT           "血压安全值",IDC_STATIC,23,180,41,9
+    LTEXT           "脉搏安全值",IDC_STATIC,23,199,41,9
+    CONTROL         "危重",IDC_DANGER,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    76,122,32,11,0,HIDC_DANGER
+    CONTROL         "重",IDC_BAD,"Button",BS_AUTORADIOBUTTON,119,122,24,11
+    CONTROL         "普通",IDC_NORMAL,"Button",BS_AUTORADIOBUTTON,155,122,32,
+                    11
+    GROUPBOX        "病情资料",IDC_STATIC,11,114,212,117
+    EDITTEXT        IDC_CG_HIGH,98,139,40,15,ES_AUTOHSCROLL,0,HIDC_CG_HIGH
+    EDITTEXT        IDC_TEMP_HIGH,98,158,40,15,ES_AUTOHSCROLL,0,
+                    HIDC_TEMP_HIGH
+    EDITTEXT        IDC_BP_HIGH,98,177,40,15,ES_AUTOHSCROLL,0,HIDC_BP_HIGH
+    EDITTEXT        IDC_PULSE_HIGH,98,196,40,15,ES_AUTOHSCROLL | ES_NUMBER,0,
+                    HIDC_PULSE_HIGH
+    LTEXT           "住院时间",IDC_STATIC,111,75,32,9
+    CONTROL         "",IDC_TIMEIN,"SysDateTimePick32",DTS_RIGHTALIGN | 
+                    DTS_UPDOWN | DTS_APPCANPARSE | WS_TABSTOP,146,71,56,16,
+                    WS_EX_CLIENTEDGE,HIDC_TIMEIN
+    EDITTEXT        IDC_CG_LOW,168,140,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEMP_LOW,168,159,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BP_LOW,168,178,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PULSE_LOW,168,197,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "上限",IDC_STATIC,71,143,17,8
+    LTEXT           "上限",IDC_STATIC,71,162,17,8
+    LTEXT           "上限",IDC_STATIC,71,181,17,8
+    LTEXT           "上限",IDC_STATIC,71,200,17,8
+    LTEXT           "下限",IDC_STATIC,145,143,17,8
+    LTEXT           "下限",IDC_STATIC,145,162,17,8
+    LTEXT           "下限",IDC_STATIC,144,181,17,8
+    LTEXT           "下限",IDC_STATIC,145,200,17,8
+    LTEXT           "医生",IDC_STATIC,26,73,17,9
+    EDITTEXT        IDC_DOCTOR,62,70,40,15,ES_AUTOHSCROLL,0,HIDC_DOCTOR
+END
+
+IDD_DLG_WARNING DIALOGEX 0, 0, 257, 83
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "警告"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,100,61,50,14
+    EDITTEXT        IDC_TXT_PATIENTID,115,15,121,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "报警内容",IDC_STATIC,71,36,33,8
+    LTEXT           "病人编号",IDC_STATIC,71,17,33,8
+    EDITTEXT        IDC_TXT_WARNING,115,35,122,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    ICON            IDR_MAINFRAME,IDC_STATIC,27,18,21,20
+END
+
+IDD_DLG_CG DIALOGEX 0, 0, 240, 227
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "心电图"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_CG,"Static",SS_BLACKFRAME,0,0,239,227,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DLG_LOG DIALOGEX 0, 0, 289, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "患者日志"
+MENU IDR_PRINT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LST_LOG,"SysListView32",LVS_REPORT | 
+                    LVS_SORTDESCENDING | LVS_ALIGNLEFT | WS_BORDER | 
+                    WS_TABSTOP,0,0,289,238
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "PMS.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "PMS.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "翻译", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_LEFTVIEW, DIALOG
+    BEGIN
+        RIGHTMARGIN, 126
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 282
+    END
+
+    IDD_DLG_PATIENT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 236
+        BOTTOMMARGIN, 261
+    END
+
+    IDD_DLG_WARNING, DIALOG
+    BEGIN
+        RIGHTMARGIN, 255
+    END
+
+    IDD_DLG_CG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 225
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "PMS\n\nPMS\nPMS Files (*.pms)\n.pms\nPMS.Document\nPMS.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "PMS"
+    AFX_IDS_IDLEMESSAGE     "若要获取帮助，请按 F1"
+    AFX_IDS_HELPMODEMESSAGE "选择要获取其帮助信息的对象"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "创建新文档\n新建"
+    ID_FILE_OPEN            "打开现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "用新名称保存活动文档\n另存为"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "显示程序信息、版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+    ID_HELP_INDEX           "打开帮助\n帮助主题"
+    ID_HELP_FINDER          "列出帮助主题\n帮助主题"
+    ID_HELP_USING           "显示有关如何使用帮助的说明\n帮助"
+    ID_CONTEXT_HELP         "显示有关单击过的按钮、菜单和窗口的帮助信息\n帮助"
+    ID_HELP                 "显示当前任务或命令的帮助信息\n帮助"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "打开此文档"
+    ID_FILE_MRU_FILE2       "打开此文档"
+    ID_FILE_MRU_FILE3       "打开此文档"
+    ID_FILE_MRU_FILE4       "打开此文档"
+    ID_FILE_MRU_FILE5       "打开此文档"
+    ID_FILE_MRU_FILE6       "打开此文档"
+    ID_FILE_MRU_FILE7       "打开此文档"
+    ID_FILE_MRU_FILE8       "打开此文档"
+    ID_FILE_MRU_FILE9       "打开此文档"
+    ID_FILE_MRU_FILE10      "打开此文档"
+    ID_FILE_MRU_FILE11      "打开此文档"
+    ID_FILE_MRU_FILE12      "打开此文档"
+    ID_FILE_MRU_FILE13      "打开此文档"
+    ID_FILE_MRU_FILE14      "打开此文档"
+    ID_FILE_MRU_FILE15      "打开此文档"
+    ID_FILE_MRU_FILE16      "打开此文档"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回上一个窗格\n上一窗格"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "将活动窗口拆分为多个窗格\n拆分"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "清除选定内容\n清除"
+    ID_EDIT_CLEAR_ALL       "清除全部内容\n全部清除"
+    ID_EDIT_COPY            "复制选定内容并将其放到剪贴板上\n复制"
+    ID_EDIT_CUT             "剪切选定内容并将其放到剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的文本\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一操作\n重复"
+    ID_EDIT_REPLACE         "用其他文本替换特定的文本\n替换"
+    ID_EDIT_SELECT_ALL      "选定整个文档\n全选"
+    ID_EDIT_UNDO            "撤消上一操作\n撤消"
+    ID_EDIT_REDO            "恢复上次撤消的操作\n重做"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n切换工具栏"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n切换状态栏"
+    ID_VIEW_AUTOARRANGE     "以网格方式排列图标。"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "更改窗口大小"
+    AFX_IDS_SCMOVE          "更改窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小为图标"
+    AFX_IDS_SCMAXIMIZE      "使窗口最大化显示"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到前一个文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动窗口并提示保存文档"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "将窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务列表"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_SMALLICON       "使用小图标显示各项。\n小图标"
+    ID_VIEW_LARGEICON       "使用大图标显示各项。\n大图标"
+    ID_VIEW_LIST            "以列表方式显示各项。\n列表"
+    ID_VIEW_DETAILS         "显示窗口中每一项的相关详细信息。\n详细信息"
+    ID_VIEW_LINEUP          "以网格方式排列图标。"
+    ID_VIEW_BYNAME          "按字母顺序对图标排序。"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\PMS.rc2"  // 非 Microsoft Visual C++ 编辑资源
+#include "afxres.rc"         // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

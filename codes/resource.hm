@@ -1,0 +1,14 @@
+// Microsoft Visual C++ generated Help ID include file.
+// Used by PMS.rc
+//
+#define HIDC_AGE                        0x806a03ec    // IDD_DLG_PATIENT
+#define HIDC_BP_HIGH                    0x806a03f2    // IDD_DLG_PATIENT
+#define HIDC_CG_HIGH                    0x806a03f0    // IDD_DLG_PATIENT
+#define HIDC_DANGER                     0x806a03ed    // IDD_DLG_PATIENT
+#define HIDC_DOCTOR                     0x806a03f4    // IDD_DLG_PATIENT
+#define HIDC_MALE                       0x806a03ea    // IDD_DLG_PATIENT
+#define HIDC_NAME                       0x806a03e9    // IDD_DLG_PATIENT
+#define HIDC_PATIENTID                  0x806a03e8    // IDD_DLG_PATIENT
+#define HIDC_PULSE_HIGH                 0x806a03f3    // IDD_DLG_PATIENT
+#define HIDC_TEMP_HIGH                  0x806a03f1    // IDD_DLG_PATIENT
+#define HIDC_TIMEIN                     0x806a03f6    // IDD_DLG_PATIENT
